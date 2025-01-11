@@ -1,7 +1,7 @@
 <div class="max-w-md mx-auto p-4 bg-white shadow rounded">
     <form [formGroup]="postForm" (ngSubmit)="submit()">
       <div class="mb-4">
-        <label for="title" class="block text-sm font-medium">Title</label>
+        <label for="title" class="block text-sm font-medium">Título</label>
         <input
           type="text"
           id="title"
@@ -9,11 +9,11 @@
           class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
         />
         <small *ngIf="postForm.get('title')?.invalid && postForm.get('title')?.touched" class="text-red-600">
-          Title is required and must be at least 5 characters.
+          Título es requerido y debe ser al menos 5 carácteres de largo.
         </small>
       </div>
       <div class="mb-4">
-        <label for="image" class="block text-sm font-medium">Image</label>
+        <label for="imagen" class="block text-sm font-medium">Imagen</label>
         <input
           type="file"
           id="image"
@@ -30,7 +30,7 @@
         [disabled]="postForm.invalid"
         class="w-full bg-blue-500 text-white font-medium py-2 rounded shadow hover:bg-blue-600"
       >
-        Create Post
+        Crear Post
       </button>
     </form>
   </div>

@@ -31,11 +31,11 @@ export class CreatePostComponent {
       const { title } = this.postForm.value;
       this.postService.createPost(title, this.selectedImage).subscribe({
         next: (response) => {
-          alert('Post created successfully!');
+          alert('Post creado');
           this.postForm.reset();
         },
         error: (err) => {
-          console.error('Error creating post:', err);
+          console.error('Error creando post:', err);
           alert('Failed to create post. Please try again.');
         }
       });
